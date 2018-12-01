@@ -9,12 +9,13 @@ var mineApi = (app) => {
 
         let the_file_mine = req.files.zipFile;
 
-        the_file_mine.mv('/main_program_dir/zipFile.zip', (err) => {
+        the_file_mine.mv('./main_program_dir/zipFile.zip', (err) => {
             if (err) {
-                return res.status(500).send(err);
+                console.log(err);
             }
         });
 
+        console.log('File Processed Successfully !');
         res.send('File Received and Processed !');
 
     });

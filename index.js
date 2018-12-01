@@ -1,4 +1,4 @@
-var express = require("express");
+var express = require("express");  
 var bodyParser = require("body-parser");
 var fileUpload = require("express-fileupload");
 var mineApi = require("./mineApi.js");
@@ -14,6 +14,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+mineApi(app);
 
 var server = app.listen(app.get('port'), () => {
     console.log("DocuMine API Server is Up and Running on ", server.address().port);

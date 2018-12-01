@@ -1,0 +1,11 @@
+{
+  "name": "documine",
+  "version": "1.0.0",
+  "description": "It's an api to extract the primary context from the document uploaded.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raspbian Horizon",
+  "license": "ISC"
+}

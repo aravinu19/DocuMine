@@ -1,10 +1,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var fileUpload = require("express-fileupload");
 var mineApi = require("./mineApi.js");
 
 var app = express();
 app.set('port', (process.env.PORT || 8080));
 app.use(bodyParser.json());
+app.use(fileUpload());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(function(req, res, next) {

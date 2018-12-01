@@ -20,3 +20,5 @@ var mineApi = (app) => {
     });
 
 };
+
+module.exports = mineApi;
